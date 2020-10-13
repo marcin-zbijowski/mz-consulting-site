@@ -16,12 +16,6 @@
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="/">
     <meta property="og:url" content="https://zbijowski.consulting/">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-      function onSubmit(token) {
-        document.getElementById("contact-form").submit();
-      }
-    </script>
   </head>
   <body data-home-page-title="Marcin Zbijowski Consulting" class="u-body">
     <section class="u-clearfix u-section-1" id="carousel_1e41">
@@ -91,7 +85,7 @@
             <div class="u-container-layout u-valign-middle u-container-layout-2">
               <h2 class="u-custom-font u-font-oswald u-text u-text-1">Contact Us</h2>
               <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-form u-form-1">
-                <form id="contact-form" data-netlify="true" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="contact">
+                <form id="contact-form" data-netlify-recaptcha="true" data-netlify="true" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="contact">
                   <div class="u-form-group u-form-name u-form-group-1">
                     <label for="name-5a14" class="u-form-control-hidden u-label" wfd-invisible="true">Name</label>
                     <input type="text" placeholder="Enter your Name" id="name-5a14" name="name" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white" required="">
@@ -104,13 +98,9 @@
                     <label for="message-5a14" class="u-form-control-hidden u-label" wfd-invisible="true">Message</label>
                     <textarea placeholder="Enter your message" rows="4" cols="50" id="message-5a14" name="message" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-white" required=""></textarea>
                   </div>
+                  <div data-netlify-recaptcha="true"></div>
                   <div class="u-align-center u-form-group u-form-submit u-form-group-4">
-                    <!-- <button type="submit" class="u-black u-btn u-btn-submit u-button-style u-btn-1">Submit</button> -->
-                    <button class="g-recaptcha u-black u-btn u-btn-submit u-button-style u-btn-1" 
-                      type="submit"
-                      data-sitekey="6Lfy6dYZAAAAADgYMNMP7-CZVP_-JtiHimPt_z55" 
-                      data-callback='onSubmit' 
-                      data-action='submit'>Submit</button>
+                    <button type="submit" class="u-black u-btn u-btn-submit u-button-style u-btn-1">Submit</button>
                   </div>
                   <div class="u-form-send-message u-form-send-success" wfd-invisible="true"> Thank you! Your message has been sent. </div>
                   <div class="u-form-send-error u-form-send-message" wfd-invisible="true"> Unable to send your message. Please fix errors then try again. </div>
